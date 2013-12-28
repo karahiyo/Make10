@@ -2,7 +2,11 @@ require 'helper'
 
 class Make10Test < Test::Unit::TestCase
   def test_solve
-    assert_equal(["1+2+3+4", "1*2*3+4"], Make10.solve(1, 2, 3, 4));
-    assert_equal(["5-1-1+7"], Make10.solve(5, 1, 1, 7));
+    ret = Make10.solve(1, 2, 3, 4)
+    # solve problem without sorting and parentheses
+    assert_equal(true, ret.include?("1+2+3+4"));
+    assert_equal(true, ret.include?("1*2*3+4"));
+    # solve problem with sort, but without partheses
+    assert_equal(true, Make10.solve(1, 1, 5, 7).include?("5-1-1+7"));
   end
 end
