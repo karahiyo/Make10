@@ -25,7 +25,7 @@ module Make10
       end
     end
 
-    return ans
+    return ans.uniq
 
   end
 

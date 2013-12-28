@@ -11,6 +11,6 @@ class Make10Test < Test::Unit::TestCase
     assert_equal(true, ret.include?(sprintf("%d-%d-%d+%d", 5, 1, 1, 7)));
     # solve problem with sort and parentheses
     ret = Make10.solve(1, 1, 5, 8)
-    assert_equal(true, ret.count > 0);
+    assert_equal(true, ret.size == 1);
   end
 end
