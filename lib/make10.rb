@@ -1,13 +1,13 @@
 module Make10
 
-  @ans_format = "%d%c%d%c%d%c%d"
+  @ans_format = "%f%c%f%c%f%c%f"
   @ops = ["+", "-", "*", "/"]
-  @parentheses_patterns = ["%d%c%d%c%d%c%d", 
-                          "(%d%c%d)%c(%d%c%d)", 
-                          "((%d%c%d)%c%d)%c%d", 
-                          "(%d%c(%d%c%d))%c%d", 
-                          "%d%c((%d%c%d)%c%d)", 
-                          "%d%c(%d%c(%d%c%d))", ]
+  @parentheses_patterns = ["%f%c%f%c%f%c%f", 
+                          "(%f%c%f)%c(%f%c%f)", 
+                          "((%f%c%f)%c%f)%c%f", 
+                          "(%f%c(%f%c%f))%c%f", 
+                          "%f%c((%f%c%f)%c%f)", 
+                          "%f%c(%f%c(%f%c%f))", ]
 
   def solve(*inputs)
     nums_list = make_all_pattern(inputs)
@@ -18,8 +18,7 @@ module Make10
           @ops.each do |o3|
             @parentheses_patterns.each do |pattern|
               exp = sprintf(pattern, nums[0] , o1, nums[1], o2, nums[2], o3, nums[3])
-              p exp
-              ans << exp if eval(exp) == 10
+              ans << exp if eval(exp) == 10.0
             end
           end
         end
