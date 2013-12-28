@@ -6,8 +6,11 @@ class Make10Test < Test::Unit::TestCase
     # solve problem without sorting and parentheses
     assert_equal(true, ret.include?(sprintf("%f+%f+%f+%f", 1, 2, 3, 4)));
     assert_equal(true, ret.include?(sprintf("%f*%f*%f+%f", 1, 2, 3, 4)));
-    # solve problem with sort, but without partheses
+    # solve problem with sort, but without parentheses
     ret = Make10.solve(1, 1, 5, 7)
     assert_equal(true, ret.include?(sprintf("%f-%f-%f+%f", 5, 1, 1, 7)));
+    # solve problem with sort and parentheses
+    ret = Make10.solve(1, 1, 5, 8)
+    assert_equal(true, ret.count > 0);
   end
 end
