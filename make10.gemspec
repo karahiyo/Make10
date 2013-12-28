@@ -4,13 +4,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "make10"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.0"
   spec.authors       = ["karahiyo"]
   spec.email         = ["a.ryuklnm@gmail.com"]
   spec.description   = %q{Solve Make10 problem.}
   spec.summary       = %q{Solve Make10 problem.}
   spec.homepage      = ""
   spec.license       = "MIT"
+
+  spec.rubyforge_project = "Make10"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
