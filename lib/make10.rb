@@ -18,7 +18,7 @@ module Make10
           @ops.each do |o3|
             @parentheses_patterns.each do |pattern|
               exp = sprintf(pattern, nums[0] , o1, nums[1], o2, nums[2], o3, nums[3])
-              ans << exp if eval(exp) == 10.0
+              ans << exp.gsub(/0|\./, "") if eval(exp) == 10.0
             end
           end
         end
@@ -36,6 +36,5 @@ module Make10
   end
 
   module_function :solve, :make_all_pattern
-
 
 end
