@@ -1,15 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'make10/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "make10"
-  spec.version       = Make10::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["karahiyo"]
   spec.email         = ["a.ryuklnm@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Solve Make10 problem.}
+  spec.summary       = %q{Solve Make10 problem.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
